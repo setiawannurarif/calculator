@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/4c6348bdc4.js" crossorigin="anonymous"></script>
+    <title>Progate Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen_container" id="screen">
+        <div class="screen shadow">
+          <input type="text" class="input_calc" id="screenCalculator" disabled />
+          <input type="text" class="input_result" value="0" id="screenCalculatorResult" disabled />
+        </div>
+      </div>
+      <div class="navbar_container" id="navbar_container">
+        <div class="navbar_left">
+          <i class="fa-solid fa-clock-rotate-left icon" id="btn__history"></i>
+          <i class="fa-solid fa-calculator icon"></i>
+          <i class="fa-solid fa-sun icon" id="btn__toggleScreen"></i>
+        </div>
+        <div class="navbar_right">
+          <i class="fa-solid fa-delete-left" id="btn__backspace"></i>
+        </div>
+      </div>
+      <div class="buttons_container" id="screenBtnCalc">
+        <div class="btn_left" id="btn__left">
+          <div class="operators_top shadow">
+            <button class="btn_primary all_clear">AC</button>
+            <button class="btn_secondary btn_operators plusMinus_sign">+/-</button>
+            <button class="btn_secondary btn_operators percentage" value="%">%</button>
+          </div>
+          <div class="btns">
+            <div class="row">
+              <button class="btn_secondary shadow numbers" value="7">7</button>
+              <button class="btn_secondary shadow numbers" value="8">8</button>
+              <button class="btn_secondary shadow numbers" value="9">9</button>
+            </div>
+            <div class="row">
+              <button class="btn_secondary shadow numbers" value="4">4</button>
+              <button class="btn_secondary shadow numbers" value="5">5</button>
+              <button class="btn_secondary shadow numbers" value="6">6</button>
+            </div>
+            <div class="row">
+              <button class="btn_secondary shadow numbers" value="1">1</button>
+              <button class="btn_secondary shadow numbers" value="2">2</button>
+              <button class="btn_secondary shadow numbers" value="3">3</button>
+            </div>
+            <div class="row">
+              <button class="btn_secondary shadow decimal" value=".">.</button>
+              <button class="btn_secondary shadow numbers" value="0">0</button>
+              <button class="btn_secondary shadow pow">x²</button>
+            </div>
+          </div>
+        </div>
+        <div class="history_container disabled" id="history__container">
+          <div class="history" id="history__screen">
+            <!-- Storage.js -->
+          </div>
+          <div class="btn_history">
+            <p id="clear__historyText">Tidak ada History!</p>
+            <button class="btn_secondary" id="clear__history">Clear History</button>
+          </div>
+        </div>
+        <div class="btn_right shadow">
+          <div class="operators_right">
+            <button class="btn_secondary btn_operators operators" value="*">x</button>
+            <button class="btn_secondary btn_operators operators" value="/">&divide;</button>
+            <button class="btn_secondary btn_operators operators" value="+">+</button>
+            <button class="btn_secondary btn_operators operators" value="-">-</button>
+            <button class="btn_primary equal_sign">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./storage.js"></script>
+  </body>
+</html>
