@@ -51,7 +51,6 @@ function updateScreenResult(number) {
   screenResult.value = number;
 }
 
-//* bug
 numbers.forEach((number) => {
   number.addEventListener('click', (e) => {
     result = '0';
@@ -146,7 +145,6 @@ allClear.addEventListener('click', () => {
   updateScreenResult(result);
 });
 
-//* bug
 btn__backspace.addEventListener('click', () => {
   currentNumber = currentNumber.slice(0, -1);
   screenCalculator.value = '';
