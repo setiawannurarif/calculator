@@ -29,7 +29,7 @@ function showHistory() {
 }
 
 function renderHistory() {
-  const historyData = showHistory();
+  const historyData = showHistory().reverse();
   let historyScreen = document.getElementById('history__screen');
   historyScreen.innerHTML = '';
 

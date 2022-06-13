@@ -51,6 +51,7 @@ function updateScreenResult(number) {
   screenResult.value = number;
 }
 
+//* bug
 numbers.forEach((number) => {
   number.addEventListener('click', (e) => {
     result = '0';
@@ -77,7 +78,6 @@ operators.forEach((operators) => {
 
 equal_sign.addEventListener('click', () => {
   calculate();
-  updateScreen('=');
   updateScreenResult(result);
   const history = {
     firstNumber: prevNumber,
@@ -90,6 +90,7 @@ equal_sign.addEventListener('click', () => {
   showBtnClearHistory();
   operationOperator = '';
   currentNumber = '';
+  screenCalculator.value = '';
 });
 
 plusMinus_sign.addEventListener('click', () => {
@@ -145,8 +146,10 @@ allClear.addEventListener('click', () => {
   updateScreenResult(result);
 });
 
+//* bug
 btn__backspace.addEventListener('click', () => {
   currentNumber = currentNumber.slice(0, -1);
+  screenCalculator.value = '';
   updateScreen(currentNumber);
 });
 
